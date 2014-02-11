@@ -1,0 +1,7 @@
+#container {
+  position: relative;
+  margin: 100px auto 0 auto;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+}
