@@ -1,3 +1,3 @@
 $(function() {
-  Timer.init()
+  Buttons.init()
 })

@@ -1,5 +1,3 @@
 Timer = {
- init: function() {
-  //
- }
+  running: false
 }
