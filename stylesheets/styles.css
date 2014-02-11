@@ -2,6 +2,68 @@
   position: relative;
   margin: 100px auto 0 auto;
   text-align: center;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 210px;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+.timer-section {
+  position: absolute;
+  margin-top: 5px;
+  width: 134px;
+  height: 130px;
+}
+
+#client-side {
+  left: 0;
+}
+
+#server-side {
+  right: 0;
+}
+
+button#start-stop {
+  margin-top: 145px;
+  border: 2px black solid;
+  border-radius: 10px;
+  background: white;
+}
+
+button#start-stop:hover {
+  margin-top: 145px;
+  border: 2px black solid;
+  border-radius: 10px;
+  background: black;
+  color: white;
+}
+
+.display {
+  height: 70px;
+  width: 130px;
+  position: absolute;
+  border: 2px black solid;
+  border-radius: 5px;
+}
+
+#client-side .display {
+  left: 0;
+}
+
+#client-side h2 {
+  margin: 5 auto;
+}
+
+#server-side .display {
+  right: 0;
+}
+
+#server-side h2 {
+  margin: 5 auto;
 }
