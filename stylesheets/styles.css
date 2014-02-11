@@ -68,3 +68,10 @@ button#start-stop:hover {
 #server-side h2 {
   margin: 5 auto;
 }
+
+.counter {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  font-size: 40px;
+}
