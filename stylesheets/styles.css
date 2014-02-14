@@ -29,17 +29,18 @@ h2 {
   right: 0;
 }
 
-button#start-stop {
+button {
   margin-top: 145px;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: 74px;
   border: 2px black solid;
-  border-radius: 10px;
+  border-radius: 15px;
   background: white;
+  font-size: 15px;
 }
 
-button#start-stop:hover {
-  margin-top: 145px;
-  border: 2px black solid;
-  border-radius: 10px;
+button:hover {
   background: black;
   color: white;
 }
