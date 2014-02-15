@@ -1,0 +1,38 @@
+button {
+  margin-top: 145px;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: 74px;
+  border: 2px black solid;
+  border-radius: 15px;
+  background: white;
+  font-size: 15px;
+}
+
+button#start-stop.start {
+  background: #4CFF80;
+}
+
+button#start-stop.start:hover {
+  background: #98FFB6;
+}
+
+button#start-stop.stop {
+  background: #FF685A;
+}
+
+button#start-stop.stop:hover {
+  background: #FFAEA6;
+}
+
+button#reset {
+  background: #FFB33B;
+}
+
+button#reset:hover {
+  background: #FFD188;
+}
+
+button#reset.disabled {
+  background: #AAA;
+}
