@@ -37,6 +37,7 @@ Buttons = {
   resetHandler: function() {
     ClientTimer.reset()
     // ServerTimer.reset()
+    $('body').animate({backgroundColor:'#fff'}, 600)
     Buttons.$reset.addClass('disabled')
     Buttons.removeResetListener()
   },
@@ -56,6 +57,7 @@ Buttons = {
     Buttons.$reset.addClass('disabled')
     ClientTimer.start()
     // ServerTimer.start()
+    $('body').animate({backgroundColor:'#98FFB6'}, 600)
   },
 
   stop: function() {
@@ -64,5 +66,6 @@ Buttons = {
     Buttons.$reset.removeClass('disabled')
     ClientTimer.stop()
     // ServerTimer.stop()
+    $('body').animate({backgroundColor:'#FFAEA6'}, 600)
   }
 }
