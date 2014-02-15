@@ -35,9 +35,8 @@ Buttons = {
   },
 
   resetHandler: function() {
-    // ClientTimer.reset()
+    ClientTimer.reset()
     // ServerTimer.reset()
-    console.log('OH HAI THERE')
     Buttons.$reset.addClass('disabled')
     Buttons.removeResetListener()
   },
@@ -55,7 +54,7 @@ Buttons = {
     Buttons.styleAsStop()
     Buttons.removeResetListener()
     Buttons.$reset.addClass('disabled')
-    // ClientTimer.start()
+    ClientTimer.start()
     // ServerTimer.start()
   },
 
@@ -63,7 +62,7 @@ Buttons = {
     Buttons.styleAsStart()
     Buttons.addResetListener()
     Buttons.$reset.removeClass('disabled')
-    // ClientTimer.stop()
+    ClientTimer.stop()
     // ServerTimer.stop()
   }
 }
