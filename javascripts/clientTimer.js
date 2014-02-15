@@ -1,3 +1,3 @@
-Timer = {
+ClientTimer = {
   running: false
 }
