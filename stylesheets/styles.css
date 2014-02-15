@@ -1,13 +1,30 @@
+body {
+  background: white;
+}
+
 #container {
   position: relative;
   margin: 100px auto 0 auto;
   text-align: center;
   width: 300px;
   height: 210px;
+  background: transparent;
+  z-index: 1;
+}
+
+#frosted-back {
+  background: white;
+  top: -215px;
+  width: 320px;
+  height: 230px;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0.5;
 }
 
 h1 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 h2 {
@@ -42,16 +59,12 @@ h2 {
   left: 0;
 }
 
-#client-side h2 {
+h2 {
   margin: 5 auto;
 }
 
 #server-side .display {
   right: 0;
-}
-
-#server-side h2 {
-  margin: 5 auto;
 }
 
 .counter {
