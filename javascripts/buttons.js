@@ -4,41 +4,39 @@ Buttons = {
   init: function() {
     this.$startStop = $('button#start-stop')
     this.$reset = $('button#reset')
-    this.addEventListeners()
+    this.addStartStopListener()
   },
 
-  addEventListeners: function() {
+  addStartStopListener: function() {
     Buttons.$startStop.click(function() {
-      // clientTimer.toggle()
-      // serverTimer.toggle()
-      Buttons.toggleStartStopAppearance()
+      // ClientTimer.toggle()
+      // ServerTimer.toggle()
+      Buttons.toggleStartStop()
     })
-    Buttons.$reset.click(function() {
-      // clientTimer.reset()
-      // clientServer.reset()
-      Buttons.toggleResetAppearance()
-    })
-  }
+  },
 
-  toggleStartStopAppearance: function() {
+  // reset button event handler: do ClientTimer.reset(), ServerTimer.reset(), and add disabled class back to self
+
+  toggleStartStop: function() {
     var buttonText = Buttons.$startStop.text()
     if (buttonText == 'Start') {
-      Buttons.styleAsStart()
-    } else {
       Buttons.styleAsStop()
+      // bind listener to reset button
+      // remove disabled class from reset button
+    } else {
+      Buttons.styleAsStart()
+      // unbind listener from reset button
+      // add disabled class to reset button
     }
   },
 
-  toggleResetAppearance: function() {
-    // check whether timers are running
-    // based on that, toggle to or away from grayish appearance
-  },
-
   styleAsStart: function() {
-
+    Buttons.$startStop.removeClass('stop').addClass('start')
+    Buttons.$startStop.text('Start')
   },
 
   styleAsStop: function() {
-
+    Buttons.$startStop.removeClass('start').addClass('stop')
+    Buttons.$startStop.text('Stop')
   }
 }
