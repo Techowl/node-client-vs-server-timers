@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Compare JS timers on client and server",
   "dependencies": {
-    "socket.io": "~0.9.6"
+    "socket.io": "~0.9.6",
+    "mime": "~1.2.11"
   },
   "repository": {
     "type": "git",
