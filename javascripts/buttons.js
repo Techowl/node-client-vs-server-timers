@@ -1,6 +1,7 @@
 Buttons = {
   $startStop: null,
   $reset: null,
+  transitionTime: 700,
   init: function() {
     this.$startStop = $('button#start-stop')
     this.$reset = $('button#reset')
@@ -37,7 +38,7 @@ Buttons = {
   resetHandler: function() {
     ClientTimer.reset()
     // ServerTimer.reset()
-    $('body').animate({backgroundColor:'#bbb'}, 600)
+    $('body').animate({backgroundColor:'#bbb'}, Buttons.transitionTime)
     Buttons.$reset.addClass('disabled')
     Buttons.removeResetListener()
   },
@@ -57,7 +58,7 @@ Buttons = {
     Buttons.$reset.addClass('disabled')
     ClientTimer.start()
     // ServerTimer.start()
-    $('body').animate({backgroundColor:'#98FFB6'}, 600)
+    $('body').animate({backgroundColor:'#98FFB6'}, Buttons.transitionTime)
   },
 
   stop: function() {
@@ -66,6 +67,6 @@ Buttons = {
     Buttons.$reset.removeClass('disabled')
     ClientTimer.stop()
     // ServerTimer.stop()
-    $('body').animate({backgroundColor:'#FFAEA6'}, 600)
+    $('body').animate({backgroundColor:'#FFAEA6'}, Buttons.transitionTime)
   }
 }
