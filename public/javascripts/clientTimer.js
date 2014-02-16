@@ -39,8 +39,8 @@ ClientTimer = {
 
   getTimeDeciseconds: function() {
     var timeDeciseconds = Math.round(ClientTimer.time / 100)
-    if (timeDeciseconds > 99999) {
-      timeDeciseconds = 99999
+    if (timeDeciseconds > 9999) {
+      timeDeciseconds = 9999
     }
     return timeDeciseconds
   },
