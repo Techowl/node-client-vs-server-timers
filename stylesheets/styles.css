@@ -8,19 +8,11 @@ body {
   text-align: center;
   width: 300px;
   height: 210px;
-  background: transparent;
-  z-index: 1;
-}
-
-#frosted-back {
-  background: white;
-  top: -215px;
-  width: 320px;
-  height: 230px;
+  padding: 10px;
+  background: rgb(255,255,255);
+  background: rgba(255,255,255,0.5);
   border-radius: 10px;
-  position: relative;
-  margin: 0 auto;
-  opacity: 0.5;
+  z-index: 1;
 }
 
 h1 {
@@ -39,11 +31,11 @@ h2 {
 }
 
 #client-side {
-  left: 0;
+  left: 10px;
 }
 
 #server-side {
-  right: 0;
+  right: 10px;
 }
 
 .display {
