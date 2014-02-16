@@ -1,0 +1,12 @@
+{
+  "name": "timers",
+  "version": "0.0.1",
+  "description": "Compare JS timers on client and server",
+  "dependencies": {
+    "socket.io": "~0.9.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Techowl/node-client-vs-server-timers"
+  }
+}
