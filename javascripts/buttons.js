@@ -37,7 +37,7 @@ Buttons = {
   resetHandler: function() {
     ClientTimer.reset()
     // ServerTimer.reset()
-    $('body').animate({backgroundColor:'#fff'}, 600)
+    $('body').animate({backgroundColor:'#bbb'}, 600)
     Buttons.$reset.addClass('disabled')
     Buttons.removeResetListener()
   },
