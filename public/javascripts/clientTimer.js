@@ -5,7 +5,7 @@ ClientTimer = {
   running: false,
 
   init: function() {
-    setInterval(ClientTimer.output, 50)
+    setInterval(ClientTimer.output, 20)
   },
 
   start: function() {
