@@ -37,7 +37,7 @@ Buttons = {
 
   resetHandler: function() {
     ClientTimer.reset()
-    Socket.io.emit('reset')
+    Socket.server.emit('reset')
     $('body').animate({backgroundColor:'#ccc'}, Buttons.transitionTime)
     Buttons.$reset.addClass('disabled')
     Buttons.removeResetListener()
@@ -57,7 +57,7 @@ Buttons = {
     Buttons.removeResetListener()
     Buttons.$reset.addClass('disabled')
     ClientTimer.start()
-    Socket.io.emit('start')
+    Socket.server.emit('start')
     $('body').animate({backgroundColor:'#B7FFCB'}, Buttons.transitionTime)
   },
 
@@ -66,7 +66,7 @@ Buttons = {
     Buttons.addResetListener()
     Buttons.$reset.removeClass('disabled')
     ClientTimer.stop()
-    Socket.io.emit('stop')
+    Socket.server.emit('stop')
     $('body').animate({backgroundColor:'#FFC7BC'}, Buttons.transitionTime)
   }
 }
