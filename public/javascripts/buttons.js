@@ -9,64 +9,64 @@ Buttons = {
   },
 
   addStartStopListener: function() {
-    Buttons.$startStop.click(Buttons.startStopHandler)
+    this.$startStop.click(this.startStopHandler.bind(this))
   },
 
   toggleStartStop: function() {
-    var buttonText = Buttons.$startStop.text()
+    var buttonText = this.$startStop.text()
     if (buttonText == 'Start') {
-      Buttons.start()
+      this.start()
     } else {
-      Buttons.stop()
+      this.stop()
     }
   },
 
   styleAsStart: function() {
-    Buttons.$startStop.removeClass('stop').addClass('start')
-    Buttons.$startStop.text('Start')
+    this.$startStop.removeClass('stop').addClass('start')
+    this.$startStop.text('Start')
   },
 
   styleAsStop: function() {
-    Buttons.$startStop.removeClass('start').addClass('stop')
-    Buttons.$startStop.text('Stop')
+    this.$startStop.removeClass('start').addClass('stop')
+    this.$startStop.text('Stop')
   },
 
   startStopHandler: function() {
-    Buttons.toggleStartStop()
+    this.toggleStartStop()
   },
 
   resetHandler: function() {
     ClientTimer.reset()
     Socket.server.emit('reset')
-    $('body').animate({backgroundColor:'#ccc'}, Buttons.transitionTime)
-    Buttons.$reset.addClass('disabled')
-    Buttons.removeResetListener()
+    $('body').animate({backgroundColor:'#ccc'}, this.transitionTime)
+    this.$reset.addClass('disabled')
+    this.removeResetListener()
   },
 
   addResetListener: function() {
-    Buttons.removeResetListener() // safeguard against stacking listeners
-    Buttons.$reset.click(Buttons.resetHandler)
+    this.removeResetListener() // safeguard against stacking listeners
+    this.$reset.click(this.resetHandler.bind(this))
   },
 
   removeResetListener: function() {
-    Buttons.$reset.off('click', Buttons.resetHandler)
+    this.$reset.off('click', this.resetHandler.bind(this))
   },
 
   start: function() {
-    Buttons.styleAsStop()
-    Buttons.removeResetListener()
-    Buttons.$reset.addClass('disabled')
+    this.styleAsStop()
+    this.removeResetListener()
+    this.$reset.addClass('disabled')
     ClientTimer.start()
     Socket.server.emit('start')
-    $('body').animate({backgroundColor:'#B7FFCB'}, Buttons.transitionTime)
+    $('body').animate({backgroundColor:'#B7FFCB'}, this.transitionTime)
   },
 
   stop: function() {
-    Buttons.styleAsStart()
-    Buttons.addResetListener()
-    Buttons.$reset.removeClass('disabled')
+    this.styleAsStart()
+    this.addResetListener()
+    this.$reset.removeClass('disabled')
     ClientTimer.stop()
     Socket.server.emit('stop')
-    $('body').animate({backgroundColor:'#FFC7BC'}, Buttons.transitionTime)
+    $('body').animate({backgroundColor:'#FFC7BC'}, this.transitionTime)
   }
 }
