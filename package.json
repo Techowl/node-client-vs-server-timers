@@ -4,8 +4,7 @@
   "description": "Compare JS timers on client and server",
   "dependencies": {
     "express": "~3.4.8",
-    "socket.io": "~0.9.6",
-    "mime": "~1.2.11"
+    "socket.io": "~0.9.6"
   },
   "repository": {
     "type": "git",
