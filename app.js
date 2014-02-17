@@ -1,8 +1,11 @@
 var express = require('express')
+var socket = require('socket.io')
 var http = require('http')
 var path = require('path')
 
 var app = express()
+
+var io = socket.listen(app)
 
 app.set('port', process.env.PORT || 1337)
 app.use(express.static(path.join(__dirname, 'public')))
