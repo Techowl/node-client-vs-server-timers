@@ -19,22 +19,22 @@ server = http.createServer(app).listen(app.get('port'), function(){
 
 io = socket.listen(server)
 
-io.sockets.on('connection', function(client){
+io.sockets.on('connection', function(socket){
   var serverTimer = require('./lib/serverTimer')
 
   setInterval(function(){
-    client.emit('update', {time: serverTimer.output()})
-  }, 50)
+    socket.emit('update', {time: serverTimer.output()})
+  }, 20)
 
-  io.sockets.on('start', function(){
+  socket.on('start', function(){
     serverTimer.start()
   })
 
-  io.sockets.on('stop', function(){
+  socket.on('stop', function(){
     serverTimer.stop()
   })
 
-  io.sockets.on('reset', function(){
+  socket.on('reset', function(){
     serverTimer.reset()
   })
 })
