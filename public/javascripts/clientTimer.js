@@ -37,22 +37,20 @@ ClientTimer = {
     }
   },
 
-  getTimeDeciseconds: function() {
-    var timeDeciseconds = Math.round(ClientTimer.time / 100)
-    if (timeDeciseconds > 9999) {
-      timeDeciseconds = 9999
-    }
-    return timeDeciseconds
-  },
-
   getOutputTime: function() {
+    var time = ClientTimer.time
     var timeString, str
-    var timeDeciseconds = ClientTimer.getTimeDeciseconds()
-    if (timeDeciseconds <= 9) {
-      timeString = '0.' + String(timeDeciseconds)
+    if (time <= 9) {
+      timeString = '0.00' + String(time)
+    } else if (time <= 99) {
+      timeString = '0.0' + String(time)
+    } else if (time <= 999) {
+      timeString = '0.' + String(time)
+    } else if (time >= 99999) {
+      timeString = '99.999'
     } else {
-      str = String(timeDeciseconds)
-      timeString = str.slice(0, str.length - 1) + '.' + str[str.length - 1]
+      str = String(time)
+      timeString = str.slice(0, str.length - 3) + '.' + str.slice(str.length - 3, str.length)
     }
     return timeString
   }
