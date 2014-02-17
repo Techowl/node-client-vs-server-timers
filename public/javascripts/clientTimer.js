@@ -5,40 +5,40 @@ ClientTimer = {
   running: false,
 
   init: function() {
-    setInterval(ClientTimer.output, 20)
+    setInterval(this.output.bind(this), 20)
   },
 
   start: function() {
-    ClientTimer.startTime = new Date()
-    ClientTimer.running = true
+    this.startTime = new Date()
+    this.running = true
   },
 
   stop: function() {
-    ClientTimer.stopTime = new Date()
-    ClientTimer.time += ClientTimer.stopTime - ClientTimer.startTime
-    ClientTimer.running = false
+    this.stopTime = new Date()
+    this.time += this.stopTime - this.startTime
+    this.running = false
   },
 
   reset: function() {
-    ClientTimer.time = 0
-    ClientTimer.startTime = new Date()
+    this.time = 0
+    this.startTime = new Date()
   },
 
   output: function() {
-    ClientTimer.updateTime()
-    var timeOutput = ClientTimer.getOutputTime()
+    this.updateTime()
+    var timeOutput = this.getOutputTime()
     $('#client-side .counter').text(timeOutput)
   },
 
   updateTime: function() {
-    if (ClientTimer.running) {
-      ClientTimer.stop()
-      ClientTimer.start()
+    if (this.running) {
+      this.stop()
+      this.start()
     }
   },
 
   getOutputTime: function() {
-    var time = ClientTimer.time
+    var time = this.time
     var timeString, str
     if (time <= 9) {
       timeString = '0.00' + String(time)
