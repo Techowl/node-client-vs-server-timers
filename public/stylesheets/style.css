@@ -6,7 +6,7 @@ body {
   position: relative;
   margin: 100px auto 0 auto;
   text-align: center;
-  width: 300px;
+  width: 326px;
   height: 210px;
   padding: 10px;
   background: rgb(255,255,255);
@@ -29,7 +29,7 @@ h2 {
 .timer-section {
   position: absolute;
   margin-top: 5px;
-  width: 134px;
+  width: 147px;
   height: 130px;
 }
 
@@ -43,7 +43,7 @@ h2 {
 
 .display {
   height: 70px;
-  width: 130px;
+  width: 143px;
   position: absolute;
   border: 2px black solid;
   border-radius: 5px;
