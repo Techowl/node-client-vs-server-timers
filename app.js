@@ -28,12 +28,14 @@ io.configure(function () { // for Heroku
 io.sockets.on('connection', function(socket){
   socket.set('timer', serverTimer())
 
-  setInterval(function(){
+  var id = setInterval(function(){
     socket.get('timer', function(err, timer){
       var time = timer.output()
       socket.emit('update', {time: time})
     })
   }, 20)
+
+  socket.set('id', id)
 
   socket.on('start', function(){
     socket.get('timer', function(err, timer){
@@ -50,6 +52,12 @@ io.sockets.on('connection', function(socket){
   socket.on('reset', function(){
     socket.get('timer', function(err, timer){
       timer.reset()
+    })
+  })
+
+  socket.on('disconnect', function(){
+    socket.get('id', function(err, id){
+      clearInterval(id)
     })
   })
 })
