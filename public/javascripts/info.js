@@ -27,7 +27,7 @@ Info = {
   },
 
   expand: function() {
-    $('div#info').animate({'width': '346px', 'height': '175px'}, 400, this.showText)
+    $('div#info').animate({'width': '346px', 'height': '178px'}, 400, this.showText)
   },
 
   shrink: function() {
