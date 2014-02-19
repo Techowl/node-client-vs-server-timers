@@ -31,7 +31,6 @@ io.sockets.on('connection', function(socket){
   }, 20)
 
   socket.on('start', function(){
-    console.log('start called!')
     socket.get('timer', function(err, timer){
       timer.start()
     })
