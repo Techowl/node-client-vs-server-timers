@@ -4,9 +4,5 @@ var Socket = {
     this.server.on('update', function(data){
       $('#server-side .counter').text(data.time)
     })
-
-    setInterval(function(){
-      Socket.server.emit('keep-alive')
-    }, 20000)
   }
 }
