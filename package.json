@@ -13,5 +13,10 @@
   },
   "engines": {
     "node": "~0.10.25"
+  },
+  "author": {
+    "name": "Daniel Kimbel",
+    "email": "dkkimbel@gmail.com",
+    "url": "http://www.danielkimbel.com"
   }
 }
