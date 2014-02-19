@@ -6,6 +6,7 @@
     "express": "~3.4.8",
     "socket.io": "~0.9.16"
   },
+  "homepage": "http://two-timers.herokuapp.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/Techowl/node-client-vs-server-timers"
