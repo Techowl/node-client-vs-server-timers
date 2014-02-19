@@ -20,6 +20,11 @@ server = http.createServer(app).listen(app.get('port'), function(){
 
 io = socket.listen(server)
 
+io.configure(function () { // for Heroku
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
 io.sockets.on('connection', function(socket){
   socket.set('timer', serverTimer())
 
