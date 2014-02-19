@@ -6,7 +6,7 @@ var Socket = {
     })
 
     setInterval(function(){
-      this.server.emit('keep-alive')
+      Socket.server.emit('keep-alive')
     }, 20000)
   }
 }
