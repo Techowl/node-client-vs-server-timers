@@ -22,7 +22,7 @@ io = socket.listen(server)
 
 io.configure(function () { // for Heroku
   io.set("transports", ["xhr-polling"]);
-  io.set("polling duration", 10);
+  io.set("polling duration", 1000);
 });
 
 io.sockets.on('connection', function(socket){
