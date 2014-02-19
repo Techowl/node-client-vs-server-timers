@@ -4,10 +4,13 @@
   "description": "Compare JS timers on client and server",
   "dependencies": {
     "express": "~3.4.8",
-    "socket.io": "~0.9.6"
+    "socket.io": "~0.9.16"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Techowl/node-client-vs-server-timers"
+  },
+  "engines": {
+    "node": "~0.10.25"
   }
 }
