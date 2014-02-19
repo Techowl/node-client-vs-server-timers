@@ -26,7 +26,6 @@ io.sockets.on('connection', function(socket){
   setInterval(function(){
     socket.get('timer', function(err, timer){
       var time = timer.output()
-      console.log('time: ' + String(time))
       socket.emit('update', {time: time})
     })
   }, 20)
