@@ -2,6 +2,7 @@ var express = require('express')
 var socket = require('socket.io')
 var http = require('http')
 var path = require('path')
+var serverTimer = require('./lib/serverTimer')
 var server, io
 
 var app = express()
@@ -20,21 +21,32 @@ server = http.createServer(app).listen(app.get('port'), function(){
 io = socket.listen(server)
 
 io.sockets.on('connection', function(socket){
-  var serverTimer = require('./lib/serverTimer')
+  socket.set('timer', serverTimer())
 
   setInterval(function(){
-    socket.emit('update', {time: serverTimer.output()})
+    socket.get('timer', function(err, timer){
+      var time = timer.output()
+      console.log('time: ' + String(time))
+      socket.emit('update', {time: time})
+    })
   }, 20)
 
   socket.on('start', function(){
-    serverTimer.start()
+    console.log('start called!')
+    socket.get('timer', function(err, timer){
+      timer.start()
+    })
   })
 
   socket.on('stop', function(){
-    serverTimer.stop()
+    socket.get('timer', function(err, timer){
+      timer.stop()
+    })
   })
 
   socket.on('reset', function(){
-    serverTimer.reset()
+    socket.get('timer', function(err, timer){
+      timer.reset()
+    })
   })
 })
