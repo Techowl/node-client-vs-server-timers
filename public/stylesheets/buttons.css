@@ -19,11 +19,11 @@ button#start-stop.start:hover {
 }
 
 button#start-stop.stop {
-  background: #FFAEA6;
+  background: #FFC9C5;
 }
 
 button#start-stop.stop:hover {
-  background: #FFC9C5;
+  background: #FFDBD8;
 }
 
 button#reset {
