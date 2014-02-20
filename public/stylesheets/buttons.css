@@ -11,27 +11,27 @@ button {
 }
 
 button#start-stop.start {
-  background: #4CFF80;
-}
-
-button#start-stop.start:hover {
   background: #98FFB6;
 }
 
-button#start-stop.stop {
-  background: #FF685A;
+button#start-stop.start:hover {
+  background: #BFFFD5;
 }
 
-button#start-stop.stop:hover {
+button#start-stop.stop {
   background: #FFAEA6;
 }
 
+button#start-stop.stop:hover {
+  background: #FFC9C5;
+}
+
 button#reset {
-  background: #FFB33B;
+  background: #FFDD89;
 }
 
 button#reset:hover {
-  background: #FFD188;
+  background: #FFE9A9;
 }
 
 button#reset.disabled {
