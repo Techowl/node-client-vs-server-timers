@@ -35,5 +35,5 @@ button#reset:hover {
 }
 
 button#reset.disabled {
-  background: #AAA;
+  background: #CCC;
 }
