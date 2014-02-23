@@ -74,13 +74,15 @@ h2 {
   position: relative;
   margin: 50px auto 0 auto;
   width: 37px;
-  height: 37px;
+  height: 27px;
   text-align: justify;
-  background: rgb(255,255,255);
-  background: rgba(255,255,255,0.5);
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255,255, .5);
   z-index: 1;
   border-radius: 10px;
   line-height: 30px;
+  overflow: auto;
+  padding-bottom: 10px;
 }
 
 #info i {
